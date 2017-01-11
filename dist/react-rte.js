@@ -14270,7 +14270,7 @@ function(module, exports, __webpack_require__) {
             value: function(src) {
                 var editorState = this.props.editorState, contentState = editorState.getCurrentContent(), selection = editorState.getSelection(), entityKey = _draftJs.Entity.create(_draftJsUtils.ENTITY_TYPE.IMAGE, "IMMUTABLE", {
                     src: src
-                }), updatedContent = _draftJs.Modifier.insertText(contentState, selection, " ", null, entityKey);
+                }), updatedContent = _draftJs.Modifier.replaceText(contentState, selection, " ", null, entityKey);
                 this.setState({
                     showImageInput: !1
                 }), this.props.onChange(_draftJs.EditorState.push(editorState, updatedContent)), 
