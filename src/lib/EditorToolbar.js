@@ -271,7 +271,7 @@ export default class EditorToolbar extends Component {
     let contentState = editorState.getCurrentContent();
     let selection = editorState.getSelection();
     let entityKey = Entity.create(ENTITY_TYPE.IMAGE, 'IMMUTABLE', {src});
-    const updatedContent = Modifier.insertText(contentState, selection, ' ', null, entityKey);
+    const updatedContent = Modifier.replaceText(contentState, selection, ' ', null, entityKey);
     this.setState({showImageInput: false});
     this.props.onChange(
       EditorState.push(editorState, updatedContent)
