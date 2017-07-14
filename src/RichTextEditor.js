@@ -21,7 +21,8 @@ import {BLOCK_TYPE} from 'draft-js-utils';
 import './Draft.global.css';
 import styles from './RichTextEditor.css';
 
-import type {ContentBlock, Entity} from 'draft-js';
+import type {ContentBlock} from 'draft-js';
+import {Entity} from 'draft-js';
 import type {ToolbarConfig} from './lib/EditorToolbarConfig';
 import type {ImportOptions} from './lib/EditorValue';
 
